@@ -1,12 +1,25 @@
+* {
+  transition: .3s;
+}
+
 nav {
   position: fixed;
   left: 10px;
   height: 95vh;
   width: 250px;
   padding: 10px;
-  background-color: rgb(44,45,49);
   border-radius: 15px;
   overflow: hidden;
+}
+
+.dark-mode {
+  background-color: rgb(44,45,49);
+  color: white;
+}
+
+.light-mode {
+  background-color: white;
+  color: rgb(51, 50, 50);
 }
 
 .header-wrapper {
@@ -29,7 +42,6 @@ nav {
   font-size: 1.7rem;
   font-weight: 600;
   letter-spacing: 1px;
-  color: rgb(252, 250, 247);
 }
 
 .brand-wrapper p:last-child {

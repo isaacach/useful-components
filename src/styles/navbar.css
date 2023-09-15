@@ -1,0 +1,133 @@
+nav {
+  position: fixed;
+  left: 10px;
+  height: 95vh;
+  width: 250px;
+  padding: 10px;
+  background-color: rgb(44,45,49);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.brand-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.brand-wrapper p:first-child{
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgb(252, 250, 247);
+}
+
+.brand-wrapper p:last-child {
+  font-size: .85rem;
+  font-weight: 500;
+  color: rgb(97, 96, 96);
+}
+
+.header-wrapper .img-wrapper {
+  display: flex;
+  justify-content: center;
+  min-width: 70px;
+}
+
+.header-wrapper .img-wrapper img {
+  width: 50px;
+}
+
+.light-dark-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+}
+
+.light-dark-wrapper input {
+  appearance: none;
+  width: 95%;
+  height: 50px;
+  border: 1px solid rgb(66, 65, 65);
+  border-radius: 20px;
+}
+
+.light-dark-wrapper input:not(:checked) ~ .dark {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  font-weight: 500;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: rgb(97, 96, 96);
+  left: 40px;
+  transition: .3s;
+}
+
+.light-dark-wrapper input:checked ~ .dark {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  font-weight: 500;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: black;
+  left: 40px;
+  transition: .3s;
+}
+
+.light-dark-wrapper input:not(:checked) ~ .light {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  font-weight: 500;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: black;
+  right: 40px;
+  transition: .3s;
+}
+
+.light-dark-wrapper input:checked ~ .light {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  font-weight: 500;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: rgb(97, 96, 96);
+  right: 40px;
+  transition: .3s;
+}
+
+.light-dark-wrapper input:not(:checked) ~ .slider {
+  position: absolute;
+  left: calc(97.5% - 105px);
+  height: 100%;
+  width: 105px;
+  background-color: rgb(80,97,249);
+  border-radius: 20px;
+  transition: .3s;
+}
+
+.light-dark-wrapper input:checked ~ .slider {
+  position: absolute;
+  left: 2.5%;
+  height: 100%;
+  width: 105px;
+  background-color: rgb(80,97,249);
+  border-radius: 18px;
+  transition: .3s;
+}
